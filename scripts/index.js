@@ -8,6 +8,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
     repl.print("/* JavaScript REPL  Copyright (C) 2013  Aadit M Shah */");
 
+    window.print = function (message) {
+        repl.print(message, "message");
+    };
+
     repl.isBalanced = function (code) {
         var length = code.length;
         var delimiter = '';

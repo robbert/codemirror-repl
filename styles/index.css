@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+.message {
+    color: #000000 !important;
+}
+
 .error {
     color: #FF0000 !important;
     font-weight: bold;
