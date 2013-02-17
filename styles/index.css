@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.error {
+    color: #FF0000 !important;
+    font-weight: bold;
+}
