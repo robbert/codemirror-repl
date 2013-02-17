@@ -6,7 +6,7 @@ An REPL abstraction layer over the [CodeMirror](http://codemirror.net/ "CodeMirr
 
 You may see a working demo of the REPL here: [JavaScript REPL](https://rawgithub.com/aaditmshah/codemirror-repl/master/index.html "JavaScript REPL")
 
-To start using CodeMirrorREPL you need to do is include (at least) the `codemirror-repl` script and stylesheet in the `<head>` section of your web page as follows:
+To start using CodeMirrorREPL you need to include (at least) the `codemirror-repl` script and stylesheet in the `<head>` section of your web page as follows:
 
 ```html
 <link rel="stylesheet" href="./path/to/codemirror-repl.css"/>
@@ -28,7 +28,7 @@ var repl = new CodeMirrorREPL("repl", {
 });
 ```
 
-You may now print messages using the `repl.print` method. It optionally accepts a CSS class name as the second argument --- used to style pretty print text:
+You may now print messages using the `repl.print` method. It optionally accepts a CSS class name as the second argument --- used to pretty print text:
 
 ```javascript
 repl.print("/* JavaScript REPL  Copyright (C) 2013  Aadit M Shah */");
@@ -57,7 +57,7 @@ Sometimes it's necessary to allow the user to enter more than one line of input 
 
 The `isBalanced` method is called with the buffered input as an argument. If it returns a truthy value the buffered input is sent for evaluation. If it returns `null` the last buffered input line is discarded.
 
-By default `isBalanced` will always return `true` but you may override it as per your requirement. For example the following function checks whether the given JavaScript code is balanced:
+By default `isBalanced` will always return `true` but you may override it as per your requirement. For example the following function checks whether the given JavaScript code is [balanced](http://rosettacode.org/wiki/Balanced_brackets "Balanced brackets - Rosetta Code"):
 
 ```javascript
 repl.isBalanced = function (code) {
