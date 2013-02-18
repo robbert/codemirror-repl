@@ -88,7 +88,7 @@ function CodeMirrorREPL(textareaId, options) {
             buffer.push(input);
             n = history.push(input);
             mirror.setLine(line++, text + '\n');
-            var code = buffer.join('\n').replace('\r', '\n');
+            var code = buffer.join('\n').replace(/\r/g, '\n');
             var balanced = repl.isBalanced(code);
 
             if (balanced) {
@@ -171,7 +171,7 @@ function CodeMirrorREPL(textareaId, options) {
 
         message = String(message);
         var text = mirror.getLine(line);
-        message = message.replace('\n', '\r') + '\n';
+        message = message.replace(/\n/g, '\r') + '\n';
 
         if (text) {
             mirror.setMarker(line, "");
