@@ -8,6 +8,7 @@ body {
 
 .message {
     color: #000000 !important;
+    font-weight: normal;
 }
 
 .error {
